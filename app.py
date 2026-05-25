@@ -30,7 +30,7 @@ st.set_page_config(
     layout="centered"
 )
 
-# Custom CSS Layout එකක් එකතු කිරීම (ලස්සන background සහ fonts සඳහා)
+# Custom CSS Layout 
 st.markdown("""
     <style>
     .main {
@@ -44,7 +44,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# --- SIDEBAR (වම්පස මෙනුව) ---
+# --- SIDEBAR ---
 with st.sidebar:
     st.image("https://img.icons8.com/fluent/100/000000/shield.png", width=80)
     st.title("About Password Guard")
@@ -57,7 +57,7 @@ with st.sidebar:
     """)
     st.caption("🔒 Privacy Guaranteed: Processing occurs 100% locally in your RAM.")
 
-# --- MAIN INTERFACE (ප්‍රධාන පිටුව) ---
+# --- MAIN INTERFACE  ---
 st.title("🛡️ SecureAuth Password Analyzer")
 st.write("Check your password strength instantly. Our local algorithm ensures your data remains safe and private.")
 st.markdown("---")
@@ -74,7 +74,7 @@ if user_password:
     
     st.markdown("### **Security Analysis**")
     
-    # Dynamic Metrics & Progress Bars (ලකුණු අනුව වෙනස් වන ලස්සන වර්ණ)
+    # Dynamic Metrics & Progress Bars 
     if score == 5:
         st.success("🔥 **Excellent Score!** Your password is exceptionally robust.")
         st.progress(100)
@@ -93,7 +93,7 @@ if user_password:
     with col1:
         st.metric(label="Security Score", value=f"{score} / 5")
     
-    # Recommendations Box (ලස්සන වැටෙන මෙනුවක් ලෙස)
+    # Recommendations Box 
     if suggestions:
         with st.expander("💡 Click here to view Actionable Recommendations", expanded=True):
             for item in suggestions:
